@@ -1,0 +1,17 @@
+.robot {
+  max-width: 200px; /* Adjust size */
+  height: auto;
+  animation: float 4s ease-in-out infinite; /* Continuous floating effect */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0); /* Moves back down */
+  }
+}
