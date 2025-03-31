@@ -1,0 +1,2 @@
+# NotGPT
+Useless AI Assistant
