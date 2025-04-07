@@ -1,6 +1,4 @@
 .robot {
-  max-width: 200px; /* Adjust size */
-  height: auto;
   animation: float 4s ease-in-out infinite; /* Continuous floating effect */
 }
 
@@ -14,4 +12,23 @@
   100% {
     transform: translateY(0); /* Moves back down */
   }
+}
+
+.container {
+  background-color: #353c42;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* X, Y, Blur, Opacity */
+}
+
+.auto-expand {
+  resize: none; /* Prevent manual resizing */
+  overflow-y: hidden; /* Hide scrollbar */
+  min-height: 30px; /* Start small */
+  max-height: 200px; /* Prevent it from getting too big */
+  border: 2px solid #212529 !important;
+}
+
+.auto-expand::placeholder {
+  color: gray !important; /* Ensures it’s visible */
+  opacity: 1; /* Full visibility */
 }
