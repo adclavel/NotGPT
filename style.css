@@ -6,8 +6,11 @@ h2 {
   background-color: #353c42;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* X, Y, Blur, Opacity */
-  padding: 30px;
+  padding: 40px;
   position: relative;
+  max-height: 200px;
+  max-width: 600px;
+  transition: height 0.2s ease;
 }
 
 .auto-expand {
@@ -19,8 +22,8 @@ h2 {
   background-color: #353c42;
   resize: none;
   overflow-y: hidden;
-  min-height: 30px;
-  max-height: 200px;
+  min-height: 40px;
+  max-height: 120px;
   width: 500px;
   border: 2px solid #353c42;
   margin: 10px; /* Optional padding from edges */
@@ -115,4 +118,8 @@ button:active {
   to {
     transform: translateY(-0.1em);
   }
+}
+
+h5 {
+  padding-top: 10px;
 }
