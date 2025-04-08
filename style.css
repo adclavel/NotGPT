@@ -1,34 +1,118 @@
-.robot {
-  animation: float 4s ease-in-out infinite; /* Continuous floating effect */
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px); /* Moves up */
-  }
-  100% {
-    transform: translateY(0); /* Moves back down */
-  }
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
   background-color: #353c42;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* X, Y, Blur, Opacity */
+  padding: 30px;
+  position: relative;
 }
 
 .auto-expand {
-  resize: none; /* Prevent manual resizing */
-  overflow-y: hidden; /* Hide scrollbar */
-  min-height: 30px; /* Start small */
-  max-height: 200px; /* Prevent it from getting too big */
-  border: 2px solid #212529 !important;
+  color: aliceblue;
+  font-size: medium;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #353c42;
+  resize: none;
+  overflow-y: hidden;
+  min-height: 30px;
+  max-height: 200px;
+  width: 500px;
+  border: 2px solid #353c42;
+  margin: 10px; /* Optional padding from edges */
+  outline: none;
 }
 
 .auto-expand::placeholder {
   color: gray !important; /* Ensures it’s visible */
   opacity: 1; /* Full visibility */
+}
+
+.spinner {
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  border-radius: 100px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+    0px 5px 20px 0px rgb(0, 225, 255);
+  position: relative;
+  bottom: 80px;
+  left: 250px;
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: 16 px;
+  background: transparent;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 6px;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
 }
